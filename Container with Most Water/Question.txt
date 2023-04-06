@@ -1,0 +1,53 @@
+Container with Most Water
+
+
+
+Given n non-negative integers a1, a2, ..., an, where each represents a point at coordinate (i, ai). n vertical lines are drawn such that the two endpoints of line i is at (i, ai) and (i, 0). Find two lines, which together with the x-axis form a container, such that the container contains the most water.
+
+Your program should print an integer that corresponds to the maximum area of water that can be contained ( Yes, we know maximum area instead of maximum volume sounds weird. But this is a 2D plane we are working with for simplicity ).
+
+Note: You may not slant the container.
+
+Input Format
+line 1: contains an integer n denoting the size of the array.
+
+line 2: contains n-spaced integers denoting elements of the array.
+
+Output Format
+Print the most water that can be contained.
+
+Example 1
+Input
+
+4
+1 5 4 3 
+Output
+
+6
+Explanation
+
+5 and 3 are distance 2 apart. So size of the base = 2. Height of container = min(5, 3) = 3. So total area = 3 * 2 = 6
+
+Example 2
+Input
+
+3
+1 2 3
+Output
+
+2
+Explanation
+
+2 and 3 are distance 1 apart. So size of the base = 1. Height of container = min(2, 3) = 2. So total area = 2 * 1 = 2
+
+Constraints
+n == array size of height array.
+
+2 <= n <= 100000
+
+0 <= height of each point <= 10000
+
+Topic Tags
+2-Pointers
+Sorting
+Arrays
