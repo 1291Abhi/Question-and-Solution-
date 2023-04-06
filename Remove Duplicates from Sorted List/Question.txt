@@ -1,0 +1,54 @@
+Remove Duplicates from Sorted List
+
+
+
+
+Given the head of a linked list, return the list after removing the duplicates (You must delete all occurrences of any duplicate elements).
+
+It is guaranteed that the list is sorted.
+
+Linked List Structure
+
+public class Node
+{
+    int data;
+    Node next;
+    Node(int d) {data = d; next = null; }
+}   
+public class LinkedList
+{
+    Node head;  
+    Node tail;
+}
+Input Format
+You will be provided with the linked list's head.
+
+Output Format
+Return the head of the linked list after removing the duplicates.
+
+Example 1
+Input
+
+4
+3 4 4 5
+Output
+
+3 5
+Explanation
+
+The linked list after removing the duplicates is 3 -> 5 (4 is removed from the list).
+
+Example 2
+Input
+
+3
+1 5 7
+Output:
+
+1 5 7
+Explanation
+
+The linked list after removing the duplicates is 1 -> 5 -> 7. (No duplicates)
+
+Constraints
+1 <= n <= 2*10^4
