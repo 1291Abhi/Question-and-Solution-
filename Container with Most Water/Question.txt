@@ -1,53 +1,65 @@
-Container with Most Water
+Kth Ancestor of a Tree Node
 
 
 
-Given n non-negative integers a1, a2, ..., an, where each represents a point at coordinate (i, ai). n vertical lines are drawn such that the two endpoints of line i is at (i, ai) and (i, 0). Find two lines, which together with the x-axis form a container, such that the container contains the most water.
+You are given a tree with n nodes numbered from 0 to n - 1 in the form of a parent array parent where parent[i] is the parent of ith node. The root of the tree is node 0. Find the kth ancestor of a given node.
 
-Your program should print an integer that corresponds to the maximum area of water that can be contained ( Yes, we know maximum area instead of maximum volume sounds weird. But this is a 2D plane we are working with for simplicity ).
-
-Note: You may not slant the container.
+Return the kth ancestor of a tree node or if no such ancestor is present return -1. It is the kth node in the path from that node to the root node.
 
 Input Format
-line 1: contains an integer n denoting the size of the array.
+First line contains n.
 
-line 2: contains n-spaced integers denoting elements of the array.
+Next line contains n spaced integers of parent array.
+
+Next line contains node and k.
 
 Output Format
-Print the most water that can be contained.
+Return the kth ancestor of a tree node is the kth node in the path from that node to the root node or if no such ancestor is present return -1.
 
 Example 1
 Input
 
-4
-1 5 4 3 
+7
+-1 0 0 1 1 2 2
+5 2
 Output
 
-6
+0
 Explanation
 
-5 and 3 are distance 2 apart. So size of the base = 2. Height of container = min(5, 3) = 3. So total area = 3 * 2 = 6
+        0
+    1         2
+  3   4    5    6
 
+Observe from the tree that the node 5''''s 2nd ancestor is the node 0.
 Example 2
 Input
 
-3
-1 2 3
+7
+-1 0 0 1 1 2 2
+6 3
 Output
 
-2
+-1
 Explanation
 
-2 and 3 are distance 1 apart. So size of the base = 1. Height of container = min(2, 3) = 2. So total area = 2 * 1 = 2
+        0
+    1         2
+  3   4    5    6
 
+There is no 3rd ancestor of the node 6 so output is -1.
 Constraints
-n == array size of height array.
+1 <= k <= n <= 5 * 10^4
 
-2 <= n <= 100000
+parent.length == n
 
-0 <= height of each point <= 10000
+parent[0] == -1
+
+0 <= parent[i] < n for all 0 < i < n
+
+0 <= node < n
 
 Topic Tags
-2-Pointers
-Sorting
-Arrays
+Trees
+DFS
+Binary Search
