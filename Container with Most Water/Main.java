@@ -1,32 +1,32 @@
 import java.util.*;
 
 class Solution {
-    public int kthAncestor(int n, int[] parent, int node, int k) {
-        //write code here
-        int p=parent[node]; //taking the parent of node
-        k--;                //decrease as we find first ancestor of node
+    static Long mostWater(int size, int arr[]) {
 
-        while(p!=-1 && k!=0){   //run unitil we find kth ancestor or there is no  more ancestor
-            p=parent[p];//update ancestor
-            k--;
+        long ans=0;
+        int start=0,end=size-1;
+        while(start<end){
+            ans=Math.max((end-start)*Math.min(arr[start],arr[end]),ans);
+            if(arr[start]<arr[end])
+                start++;
+            else
+                end--;
         }
-
-        return p;
-
+        return ans;
     }
+
 }
 
 public class Main {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        int n = sc.nextInt();
-        int parent[] = new int[n];
-        for (int i = 0; i < n; i++)
-            parent[i] = sc.nextInt();
-        int node = sc.nextInt();
-        int k = sc.nextInt();
-        Solution obj = new Solution();
-        System.out.println(obj.kthAncestor(n, parent, node, k));
-        sc.close();
+        int n= sc.nextInt();
+        int array[] = new int[n];
+
+        for(int i=0; i<n; i++){
+            array[i]= sc.nextInt();
+        }
+        Solution Obj = new Solution();
+        System.out.println(Obj.mostWater(n,array));
     }
 }
