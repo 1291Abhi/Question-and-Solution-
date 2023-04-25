@@ -1,0 +1,50 @@
+Get KPC
+You are given a string s consisting of numbers, where each number corresponds to a number of alphabets like in keypad-phones. The mapping is as follows:
+
+    0 -> .;
+    1 -> abc
+    2 -> def
+    3 -> ghi
+    4 -> jkl
+    5 -> mno
+    6 -> pqrs
+    7 -> tu
+    8 -> vwx
+    9 -> yz
+From this given s you need to find the numbers of words of size 4 that can be made.
+
+Note: Try solving this question with a recursive approach.
+
+Input Format
+First line contains the string s
+
+Output Format
+Complete the function GetKPC() which returns the desired integer
+
+Example 1
+Input
+
+1234
+Output
+
+81
+Example 2
+Input
+
+1034
+Output
+
+54
+Example 2
+Input
+
+103
+Output
+
+0
+Constraints
+0 <= str.length <= 10
+
+Topic Tags
+Recursion
+Strings
